@@ -7,21 +7,35 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		693768C488FB7BDD04A2FAA4 /* Pods_GymPower.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AEC07C2E680E768D481148B /* Pods_GymPower.framework */; };
 		E409F8B1219F4A8600C996BA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E409F8B0219F4A8600C996BA /* AppDelegate.swift */; };
-		E409F8B3219F4A8600C996BA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E409F8B2219F4A8600C996BA /* ViewController.swift */; };
 		E409F8B6219F4A8600C996BA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E409F8B4219F4A8600C996BA /* Main.storyboard */; };
 		E409F8B8219F4A8A00C996BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E409F8B7219F4A8A00C996BA /* Assets.xcassets */; };
 		E409F8BB219F4A8A00C996BA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E409F8B9219F4A8A00C996BA /* LaunchScreen.storyboard */; };
+		E409F8C3219F4AEF00C996BA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E409F8C2219F4AEF00C996BA /* GoogleService-Info.plist */; };
+		E409F8C9219F4C9100C996BA /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E409F8C8219F4C9100C996BA /* AuthService.swift */; };
+		E409F8CD219F4F9B00C996BA /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E409F8CC219F4F9B00C996BA /* SignInVC.swift */; };
+		E409F8CF219F556F00C996BA /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E409F8CE219F556F00C996BA /* MainVC.swift */; };
+		E409F8D1219F603800C996BA /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E409F8D0219F603800C996BA /* HeaderView.swift */; };
+		E409F8DF21A0787300C996BA /* ExerciseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E409F8DE21A0787200C996BA /* ExerciseVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6AEC07C2E680E768D481148B /* Pods_GymPower.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GymPower.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9753DE2E0AC497DFF0F3C095 /* Pods-GymPower.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GymPower.release.xcconfig"; path = "Pods/Target Support Files/Pods-GymPower/Pods-GymPower.release.xcconfig"; sourceTree = "<group>"; };
 		E409F8AD219F4A8600C996BA /* GymPower.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GymPower.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E409F8B0219F4A8600C996BA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E409F8B2219F4A8600C996BA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E409F8B5219F4A8600C996BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E409F8B7219F4A8A00C996BA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E409F8BA219F4A8A00C996BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E409F8BC219F4A8A00C996BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E409F8C2219F4AEF00C996BA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
+		E409F8C8219F4C9100C996BA /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		E409F8CC219F4F9B00C996BA /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
+		E409F8CE219F556F00C996BA /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
+		E409F8D0219F603800C996BA /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		E409F8DE21A0787200C996BA /* ExerciseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseVC.swift; sourceTree = "<group>"; };
+		ED42A84D326E114FD8B32E16 /* Pods-GymPower.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GymPower.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GymPower/Pods-GymPower.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +43,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				693768C488FB7BDD04A2FAA4 /* Pods_GymPower.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		182DEB1D144CA0A7991E78A8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				ED42A84D326E114FD8B32E16 /* Pods-GymPower.debug.xcconfig */,
+				9753DE2E0AC497DFF0F3C095 /* Pods-GymPower.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		E1F98C5500B9E2DABDD50F53 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6AEC07C2E680E768D481148B /* Pods_GymPower.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		E409F8A4219F4A8600C996BA = {
 			isa = PBXGroup;
 			children = (
 				E409F8AF219F4A8600C996BA /* GymPower */,
 				E409F8AE219F4A8600C996BA /* Products */,
+				182DEB1D144CA0A7991E78A8 /* Pods */,
+				E1F98C5500B9E2DABDD50F53 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +88,51 @@
 		E409F8AF219F4A8600C996BA /* GymPower */ = {
 			isa = PBXGroup;
 			children = (
+				E409F8C7219F4C5E00C996BA /* Services */,
+				E409F8C6219F4C5900C996BA /* Model */,
+				E409F8C5219F4C5000C996BA /* View */,
+				E409F8C4219F4C4900C996BA /* Controller */,
+				E409F8C2219F4AEF00C996BA /* GoogleService-Info.plist */,
 				E409F8B0219F4A8600C996BA /* AppDelegate.swift */,
-				E409F8B2219F4A8600C996BA /* ViewController.swift */,
 				E409F8B4219F4A8600C996BA /* Main.storyboard */,
 				E409F8B7219F4A8A00C996BA /* Assets.xcassets */,
 				E409F8B9219F4A8A00C996BA /* LaunchScreen.storyboard */,
 				E409F8BC219F4A8A00C996BA /* Info.plist */,
 			);
 			path = GymPower;
+			sourceTree = "<group>";
+		};
+		E409F8C4219F4C4900C996BA /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E409F8CC219F4F9B00C996BA /* SignInVC.swift */,
+				E409F8CE219F556F00C996BA /* MainVC.swift */,
+				E409F8DE21A0787200C996BA /* ExerciseVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		E409F8C5219F4C5000C996BA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E409F8D0219F603800C996BA /* HeaderView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E409F8C6219F4C5900C996BA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E409F8C7219F4C5E00C996BA /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				E409F8C8219F4C9100C996BA /* AuthService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +142,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E409F8BF219F4A8A00C996BA /* Build configuration list for PBXNativeTarget "GymPower" */;
 			buildPhases = (
+				577C8E4F02EC4883DE5BAD80 /* [CP] Check Pods Manifest.lock */,
 				E409F8A9219F4A8600C996BA /* Sources */,
 				E409F8AA219F4A8600C996BA /* Frameworks */,
 				E409F8AB219F4A8600C996BA /* Resources */,
+				5704F233C4971C51C76BC857 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -123,6 +196,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E409F8BB219F4A8A00C996BA /* LaunchScreen.storyboard in Resources */,
+				E409F8C3219F4AEF00C996BA /* GoogleService-Info.plist in Resources */,
 				E409F8B8219F4A8A00C996BA /* Assets.xcassets in Resources */,
 				E409F8B6219F4A8600C996BA /* Main.storyboard in Resources */,
 			);
@@ -130,13 +204,70 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		5704F233C4971C51C76BC857 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-GymPower/Pods-GymPower-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GymPower/Pods-GymPower-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		577C8E4F02EC4883DE5BAD80 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GymPower-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		E409F8A9219F4A8600C996BA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E409F8B3219F4A8600C996BA /* ViewController.swift in Sources */,
+				E409F8DF21A0787300C996BA /* ExerciseVC.swift in Sources */,
+				E409F8D1219F603800C996BA /* HeaderView.swift in Sources */,
 				E409F8B1219F4A8600C996BA /* AppDelegate.swift in Sources */,
+				E409F8CF219F556F00C996BA /* MainVC.swift in Sources */,
+				E409F8C9219F4C9100C996BA /* AuthService.swift in Sources */,
+				E409F8CD219F4F9B00C996BA /* SignInVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,6 +411,7 @@
 		};
 		E409F8C0219F4A8A00C996BA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ED42A84D326E114FD8B32E16 /* Pods-GymPower.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -298,6 +430,7 @@
 		};
 		E409F8C1219F4A8A00C996BA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9753DE2E0AC497DFF0F3C095 /* Pods-GymPower.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
