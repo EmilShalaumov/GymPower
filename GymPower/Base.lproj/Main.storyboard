@@ -425,18 +425,40 @@
                                     <action selector="continueButtonTapped:" destination="srK-oO-713" eventType="touchUpInside" id="ENy-l5-Z76"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D2w-KU-3nh">
+                                <rect key="frame" x="0.0" y="75" width="375" height="534"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="120" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kRD-ln-viQ">
+                                        <rect key="frame" x="143" y="233" width="89.5" height="68.5"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="50"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="kRD-ln-viQ" firstAttribute="centerY" secondItem="D2w-KU-3nh" secondAttribute="centerY" id="Gjl-B1-dHY"/>
+                                    <constraint firstItem="kRD-ln-viQ" firstAttribute="centerX" secondItem="D2w-KU-3nh" secondAttribute="centerX" id="pkI-nc-9Fg"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="0.79000000000000004" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="LJh-OE-QjB" firstAttribute="trailing" secondItem="5pS-pW-34h" secondAttribute="trailing" id="6Da-yG-KUo"/>
                             <constraint firstItem="fY2-FC-Qob" firstAttribute="leading" secondItem="5pS-pW-34h" secondAttribute="leading" constant="8" id="90h-X3-kXj"/>
+                            <constraint firstItem="fY2-FC-Qob" firstAttribute="top" secondItem="D2w-KU-3nh" secondAttribute="bottom" id="I3h-en-0sq"/>
                             <constraint firstItem="5pS-pW-34h" firstAttribute="trailing" secondItem="fY2-FC-Qob" secondAttribute="trailing" constant="8" id="IA5-kl-hEK"/>
+                            <constraint firstItem="D2w-KU-3nh" firstAttribute="top" secondItem="LJh-OE-QjB" secondAttribute="bottom" id="KwL-1A-FDz"/>
                             <constraint firstItem="LJh-OE-QjB" firstAttribute="top" secondItem="0E4-6I-Gdm" secondAttribute="top" id="TU7-Py-Xfl"/>
+                            <constraint firstItem="5pS-pW-34h" firstAttribute="trailing" secondItem="D2w-KU-3nh" secondAttribute="trailing" id="ZnQ-12-UUB"/>
                             <constraint firstItem="LJh-OE-QjB" firstAttribute="leading" secondItem="5pS-pW-34h" secondAttribute="leading" id="lgc-Br-F48"/>
+                            <constraint firstItem="D2w-KU-3nh" firstAttribute="leading" secondItem="5pS-pW-34h" secondAttribute="leading" id="mWD-15-wX0"/>
                             <constraint firstItem="5pS-pW-34h" firstAttribute="bottom" secondItem="fY2-FC-Qob" secondAttribute="bottom" constant="8" id="oyu-fw-kVn"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="5pS-pW-34h"/>
                     </view>
+                    <connections>
+                        <outlet property="timerLabel" destination="kRD-ln-viQ" id="11p-EL-p4p"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fLc-gh-Y0V" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

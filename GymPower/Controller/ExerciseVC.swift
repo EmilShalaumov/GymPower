@@ -20,7 +20,7 @@ class ExerciseVC: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        exerciseTextField.text = StartService.instance.exercises[exIndex].exerciseName
+        exerciseTextField.text = String(exIndex + 1) + ". " + StartService.instance.exercises[exIndex].exerciseName
         weightTextField.text = String(StartService.instance.exercises[exIndex].sets[setIndex].weight ?? -1)
         repeatsTextField.text = String(StartService.instance.exercises[exIndex].sets[setIndex].repeats ?? -1)
         // Do any additional setup after loading the view.
@@ -43,7 +43,7 @@ class ExerciseVC: UIViewController{
             setIndex = 0
             StartService.instance.currSet = 0
             StartService.instance.currExercise = exIndex
-            exerciseTextField.text = StartService.instance.exercises[exIndex].exerciseName
+            exerciseTextField.text = String(exIndex + 1) + ". " + StartService.instance.exercises[exIndex].exerciseName
             setFields()
             self.performSegue(withIdentifier: "showRestVC", sender: nil)
         } else {

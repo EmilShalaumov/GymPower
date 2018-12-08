@@ -10,14 +10,23 @@ import UIKit
 
 class RestVC: UIViewController {
 
+    @IBOutlet weak var timerLabel: UILabel!
+    var seconds = 120
+    var timer = Timer()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self,   selector: (#selector(RestVC.updateTimer)), userInfo: nil, repeats: true)
     }
     
     @IBAction func continueButtonTapped(_ sender: Any) {
         self.dismiss(animated: false, completion: nil)
+    }
+    
+    @objc func updateTimer() {
+        seconds -= 1     //This will decrement(count down)the seconds.
+        timerLabel.text = "\(seconds)" //This will update the label.
     }
     
     /*
