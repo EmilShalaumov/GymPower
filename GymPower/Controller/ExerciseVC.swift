@@ -32,6 +32,7 @@ class ExerciseVC: UIViewController{
         print(String(StartService.instance.exercises[exIndex].sets.count) + " " + String(setIndex))
         //print(StartService.instance.exercises[exIndex].sets[setIndex].weight ?? -1)
         //print(StartService.instance.exercises[exIndex].sets[setIndex].repeats ?? -1)
+        //test pool commit
         
         if StartService.instance.exercises[exIndex].sets.count > setIndex {
             StartService.instance.currSet = setIndex
