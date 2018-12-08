@@ -18,6 +18,7 @@ class MainVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     var dbUserName = AuthService.instance.username?.replacingOccurrences(of: ".", with: "", options: NSString.CompareOptions.literal, range: nil)
     let dateFormat = DateFormatter()
     let ref = Database.database().reference()
+    var checkDigit = 1
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,8 +41,8 @@ class MainVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
             userRef.child("program").observeSingleEvent(of: .value, with: { (snapshot) in
                 for child in snapshot.children {
                     let snap = child as! DataSnapshot
-                    let dayName = snap.value as! String
-                    self.days.append((dayId: snap.key, dayName: dayName))
+                    let dayName = snap.value as! Dictionary<String, AnyObject>
+                    self.days.append((dayId: snap.key, dayName: dayName["name"] as! String))
                 }
                 self.trainingDaysPicker.reloadAllComponents()
             })
@@ -62,8 +63,58 @@ class MainVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
         if let userName = dbUserName {
             let userRef = ref.child(userName)
             userRef.child("trainings").childByAutoId().setValue(["weight": weightTextField.text ?? "Null", "timestamp": dateFormat.string(from: Date()), "dayId": String(days[trainingDaysPicker.selectedRow(inComponent: 0)].dayId)])
-            self.performSegue(withIdentifier: "showExerciseVC", sender: nil)
+            print(days[trainingDaysPicker.selectedRow(inComponent: 0)].dayId)
+            /*userRef.child("program/\(days[trainingDaysPicker.selectedRow(inComponent: 0)].dayId)/exercises").observeSingleEvent(of: .value, with: { (snapshot) in
+                    for child in snapshot.children {
+                    let snap = child as! DataSnapshot
+                    let exerciseName = snap.value as! Dictionary<String, AnyObject>
+                    print(snap.key + " " + (exerciseName["name"] as! String))
+                    let sets = exerciseName["sets"] as! Dictionary<String, AnyObject>
+                    for (_, obj) in sets {
+                        print(String(obj["weight"] as! Int) + " ")
+                    }
+                }
+            })*/
+            StartService.instance = StartService()
+            StartService.instance.loadExercises(username: userName, dayId: days[trainingDaysPicker.selectedRow(inComponent: 0)].dayId, {Success in
+                if !Success {
+                    print("Load Firebase data FAILED!")
+                } else {
+                    print("Success!")
+                    for oneex in StartService.instance.exercises {
+                        print(oneex.exerciseName)
+                        for oneset in oneex.sets {
+                            print(oneset.weight ?? "a")
+                            print(oneset.repeats ?? "b")
+                        }
+                        /*let vc = ExerciseVC(nibName: "showExerciseVC", bundle: nil)
+                        vc.exIndex = 0
+                        vc.setIndex = 0
+                        self.navigationController?.pushViewController(vc, animated: true)*/
+                        StartService.instance.currExercise = 0
+                        StartService.instance.currSet = 0
+                        self.performSegue(withIdentifier: "showExerciseVC", sender: nil)
+                    }
+            }
+        })
+            
+            /*checkDigit += 1
+            if checkDigit % 2 != 0 {
+                self.performSegue(withIdentifier: "showExerciseVC", sender: nil)
+            }*/
         }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showExerciseVC" {
+            let exerciseVC = segue.destination as! ExerciseVC
+            exerciseVC.exIndex = StartService.instance.currExercise
+            exerciseVC.setIndex = StartService.instance.currSet
+        }
+    }
+    
+    func startTraining() {
+        self.performSegue(withIdentifier: "showExerciseVC", sender: nil)
     }
     
     @IBAction func decreaseWeightButtonTapped(_ sender: Any) {

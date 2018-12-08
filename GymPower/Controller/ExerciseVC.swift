@@ -8,23 +8,56 @@
 
 import UIKit
 
-class ExerciseVC: UIViewController {
-
+class ExerciseVC: UIViewController{
+    
+    @IBOutlet weak var weightTextField: UITextField!
+    @IBOutlet weak var repeatsTextField: UITextField!
+    @IBOutlet weak var exerciseTextField: UILabel!
+    
+    var setIndex: Int = -1
+    var exIndex: Int = -1
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        exerciseTextField.text = StartService.instance.exercises[exIndex].exerciseName
+        weightTextField.text = String(StartService.instance.exercises[exIndex].sets[setIndex].weight ?? -1)
+        repeatsTextField.text = String(StartService.instance.exercises[exIndex].sets[setIndex].repeats ?? -1)
         // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func closeButtonTapped(_ sender: Any) {
+        setIndex += 1
+        //exIndex += 1
+        print(String(StartService.instance.exercises[exIndex].sets.count) + " " + String(setIndex))
+        //print(StartService.instance.exercises[exIndex].sets[setIndex].weight ?? -1)
+        //print(StartService.instance.exercises[exIndex].sets[setIndex].repeats ?? -1)
+        
+        if StartService.instance.exercises[exIndex].sets.count > setIndex {
+            StartService.instance.currSet = setIndex
+            setFields()
+            UIView.setAnimationsEnabled(false)
+            self.performSegue(withIdentifier: "showRestVC", sender: nil)
+        } else if StartService.instance.exercises.count > (exIndex + 1) {
+            exIndex += 1
+            setIndex = 0
+            StartService.instance.currSet = 0
+            StartService.instance.currExercise = exIndex
+            exerciseTextField.text = StartService.instance.exercises[exIndex].exerciseName
+            setFields()
+            self.performSegue(withIdentifier: "showRestVC", sender: nil)
+        } else {
+            StartService.instance.currSet = -1
+            StartService.instance.currExercise = -1
+            self.dismiss(animated: true, completion: nil)
+        }
+        
+        //self.dismiss(animated: true, completion: nil)
     }
-    */
-
+    
+    func setFields() {
+        weightTextField.text = String(StartService.instance.exercises[exIndex].sets[setIndex].weight ?? -1)
+        repeatsTextField.text = String(StartService.instance.exercises[exIndex].sets[setIndex].repeats ?? -1)
+    }
+    
 }

@@ -15,6 +15,7 @@ class HeaderView: UIView {
         layer.shadowOpacity = 0.7
         layer.shadowOffset = CGSize.zero
         layer.shadowRadius = 2
+        layer.zPosition = 1
     }
 
 }
