@@ -288,10 +288,16 @@
                                             <constraint firstAttribute="height" constant="30" id="DJS-D7-u28"/>
                                         </constraints>
                                         <state key="normal" title="+"/>
+                                        <connections>
+                                            <action selector="increaseWeightBtnTapped:" destination="TwQ-Do-Gpd" eventType="touchUpInside" id="C86-Mc-JHM"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mmp-EY-F8O">
                                         <rect key="frame" x="8" y="46" width="167.5" height="30"/>
                                         <state key="normal" title="-"/>
+                                        <connections>
+                                            <action selector="decreaseWeightBtnTapped:" destination="TwQ-Do-Gpd" eventType="touchUpInside" id="tlm-Uf-hb2"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -331,10 +337,16 @@
                                             <constraint firstAttribute="height" constant="30" id="XIy-ks-OZF"/>
                                         </constraints>
                                         <state key="normal" title="+"/>
+                                        <connections>
+                                            <action selector="increaseRepeatsBtnTapped:" destination="TwQ-Do-Gpd" eventType="touchUpInside" id="36O-hz-794"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zpD-02-O5i">
                                         <rect key="frame" x="8" y="46" width="167.5" height="30"/>
                                         <state key="normal" title="-"/>
+                                        <connections>
+                                            <action selector="decreaseRepeatsBtnTapped:" destination="TwQ-Do-Gpd" eventType="touchUpInside" id="41G-J4-5lS"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -353,14 +365,34 @@
                                     <constraint firstItem="cl0-qm-U1X" firstAttribute="width" secondItem="zpD-02-O5i" secondAttribute="width" id="xlI-qE-8il"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uW1-m2-f8m">
+                                <rect key="frame" x="8" y="291" width="359" height="39.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 подход" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D3s-UX-PRz">
+                                        <rect key="frame" x="143" y="8" width="73.5" height="23.5"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="D3s-UX-PRz" firstAttribute="top" secondItem="uW1-m2-f8m" secondAttribute="top" constant="8" id="A0h-m4-UD4"/>
+                                    <constraint firstItem="D3s-UX-PRz" firstAttribute="centerX" secondItem="uW1-m2-f8m" secondAttribute="centerX" id="M6E-bj-ICk"/>
+                                    <constraint firstAttribute="bottom" secondItem="D3s-UX-PRz" secondAttribute="bottom" constant="8" id="dm7-Vw-E4Z"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="0.79000000000000004" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="oyK-iG-qMP" firstAttribute="trailing" secondItem="7u3-Fm-6oc" secondAttribute="trailing" id="0W6-xr-iKE"/>
                             <constraint firstItem="oyK-iG-qMP" firstAttribute="trailing" secondItem="gAC-Nk-wpM" secondAttribute="trailing" constant="8" id="99U-WI-3HH"/>
+                            <constraint firstItem="uW1-m2-f8m" firstAttribute="leading" secondItem="oyK-iG-qMP" secondAttribute="leading" constant="8" id="AZK-uQ-m1r"/>
+                            <constraint firstItem="oyK-iG-qMP" firstAttribute="trailing" secondItem="uW1-m2-f8m" secondAttribute="trailing" constant="8" id="BhO-Q4-MgT"/>
                             <constraint firstItem="gAC-Nk-wpM" firstAttribute="leading" secondItem="oyK-iG-qMP" secondAttribute="leading" constant="8" id="Fn1-Zf-Pon"/>
                             <constraint firstItem="oyK-iG-qMP" firstAttribute="bottom" secondItem="96f-Ku-1Ql" secondAttribute="bottom" constant="8" id="L2W-IM-nVa"/>
                             <constraint firstItem="gAC-Nk-wpM" firstAttribute="top" secondItem="7u3-Fm-6oc" secondAttribute="bottom" constant="16" id="X1u-Z0-teB"/>
+                            <constraint firstItem="uW1-m2-f8m" firstAttribute="top" secondItem="BIh-tH-oz5" secondAttribute="bottom" constant="16" id="Y9F-6e-cRG"/>
                             <constraint firstItem="oyK-iG-qMP" firstAttribute="trailing" secondItem="BIh-tH-oz5" secondAttribute="trailing" constant="8" id="ZcJ-XS-wDq"/>
                             <constraint firstItem="7u3-Fm-6oc" firstAttribute="leading" secondItem="oyK-iG-qMP" secondAttribute="leading" id="da7-82-aPK"/>
                             <constraint firstItem="BIh-tH-oz5" firstAttribute="leading" secondItem="oyK-iG-qMP" secondAttribute="leading" constant="8" id="g87-9R-0wp"/>
@@ -375,6 +407,7 @@
                     <connections>
                         <outlet property="exerciseTextField" destination="P0y-Uc-jaS" id="Pfa-Xn-cDn"/>
                         <outlet property="repeatsTextField" destination="AR4-LW-zaq" id="JNS-rG-cYl"/>
+                        <outlet property="setNoLabel" destination="D3s-UX-PRz" id="af2-MW-tTF"/>
                         <outlet property="weightTextField" destination="Ant-Ge-yLZ" id="Tku-To-QaQ"/>
                         <segue destination="srK-oO-713" kind="show" identifier="showRestVC" id="B0L-AN-PAg"/>
                     </connections>

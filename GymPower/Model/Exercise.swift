@@ -10,28 +10,24 @@ import Foundation
 
 struct Exercise {
     fileprivate var _exerciseName: String
-    fileprivate var _sets: [ExerciseSet]
+    var sets: [ExerciseSet]
     
     var exerciseName: String {
         return _exerciseName
     }
-    
-    var sets: [ExerciseSet] {
-        return _sets
-    }
-    
+
     init(exerciseName: String, sets: [ExerciseSet]) {
         _exerciseName = exerciseName
-        _sets = sets
+        self.sets = sets
     }
     
     init(exerciseName: String, sets: Dictionary<String, Any>) {
         _exerciseName = exerciseName
-        _sets = []
+        self.sets = []
         let sortedSets = sets.sorted(by: {$0.0 < $1.0})
         for (_, set) in sortedSets {
             let oneset = set as! Dictionary<String, Any>
-            _sets.append(ExerciseSet(weight: (oneset["weight"] as! Int), repeats: (oneset["repeats"] as! Int)))
+            self.sets.append(ExerciseSet(weight: (oneset["weight"] as! Int), repeats: (oneset["repeats"] as! Int)))
         }
     }
 }

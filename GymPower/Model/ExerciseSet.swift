@@ -13,11 +13,21 @@ struct ExerciseSet {
     fileprivate var _repeats: Int?
     
     var weight: Int? {
-        return _weight
+        get {
+            return _weight
+        }
+        set {
+            _weight = newValue
+        }
     }
     
     var repeats: Int? {
-        return _repeats
+        get {
+            return _repeats
+        }
+        set {
+            _repeats = newValue
+        }
     }
     
     init(weight: Int?, repeats: Int?) {
